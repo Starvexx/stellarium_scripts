@@ -5,7 +5,7 @@
 // Description: This file contains the names and sky coordinates (right ascension and declination) of all the target sources that are included and visited by this tour.
 //
 
-include("image_meta.inc");
+include("./NEMESIS_includes/image_meta.inc");
 
 var oriTargets = [
     {name: "ONC", ra: 83.81888733, dec: -5.38711454, fov: 0.5, images: [oncOverview, oncCenter]},

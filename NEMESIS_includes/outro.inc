@@ -5,7 +5,7 @@
 // Description: Plays the outro of the tour.
 //
 
-include("./common.inc");
+include("./NEMESIS_includes/common.inc");
 
 function outro()
 {

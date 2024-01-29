@@ -12,11 +12,11 @@ LandscapeMgr.setFlagAtmosphere(false);
 // Include auxillary files.
 //
 
-include("./common.inc");
-include("./intro.inc");
-include("./main_show.inc");
-include("./credits.inc");
-include("./outro.inc");
+include("./NEMESIS_includes/common.inc");
+include("./NEMESIS_includes/intro.inc");
+include("./NEMESIS_includes/main_show.inc");
+include("./NEMESIS_includes/credits.inc");
+include("./NEMESIS_includes/outro.inc");
 
 useStatusLabel("NEMESIS tour status msg: ", 50, 50, 16, "#ff0000");
 core.setGuiVisible(false);

@@ -9,7 +9,7 @@
 // Include the source list.
 //
 
-include("./source_list.inc");
+include("./NEMESIS_includes/source_list.inc");
 
 function play_tour()
 {

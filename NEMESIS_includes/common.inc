@@ -109,7 +109,7 @@ function showImage(img)
 
 	StelSkyLayerMgr.showLayer("Nebulae", false);
 	StelSkyLayerMgr.showLayer(name, true);
-	core.debug("Image loaded, waiting 5s ...");
+	core.debug("Image loaded, waiting 15s ...");
 	core.wait(15);
 	core.debug("Removing image ...");
 	StelSkyLayerMgr.showLayer(name, false);

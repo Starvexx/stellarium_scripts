@@ -16,7 +16,7 @@ function intro()
     
     ScreenImageMgr.createScreenImage(
     "nemesisLogo",
-    "../../../../home/starvexx/Nemesis/stellarium_scripts/images/Nemesis_logo.png",
+    "../../../../home/starvexx/Nemesis/stellarium_scripts/nemesis_images/Nemesis_logo.png",
     logoXPos,
     logoYPos,
     scale=0.5,
@@ -27,7 +27,7 @@ function intro()
 
     ScreenImageMgr.createScreenImage(
     "EULogo",
-    "../../../../home/starvexx/Nemesis/stellarium_scripts/images/EU_flag.png",
+    "../../../../home/starvexx/Nemesis/stellarium_scripts/nemesis_images/EU_flag.png",
     25,
     core.getScreenHeight() - 125,
     scale=0.25,
