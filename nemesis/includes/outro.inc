@@ -5,10 +5,11 @@
 // Description: Plays the outro of the tour.
 //
 
-include("./NEMESIS_includes/common.inc");
+include("./nemesis/includes/common.inc");
 
 function outro()
 {
+    StelMovementMgr.lookSouth(true);
     core.setDate(currentSimTime);
     core.goHome();
     core.setGuiVisible(true);
@@ -17,4 +18,5 @@ function outro()
     ConstellationMgr.setFlagIsolateSelected(false);
     ConstellationMgr.setFlagArt(false);
     ConstellationMgr.deselectConstellations();
+    core.clear("natural");
 }

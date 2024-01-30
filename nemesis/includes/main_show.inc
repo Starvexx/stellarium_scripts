@@ -9,15 +9,17 @@
 // Include the source list.
 //
 
-include("./NEMESIS_includes/source_list.inc");
+include("./nemesis/includes/source_list.inc");
 
 function play_tour()
 {
-    core.setDate("2023-12-21T23:59:59");
-
     var sun = core.getObjectInfo("Sun");
     
     core.debug("Sun altitude angle: " + sun.altitude);
+
+    // TODO: Implement check if the sun is above -18 deg ALT (i.e. it is
+    //       not astronomical night) and fast forward time from the
+    //       current simulation time until the sun is below -18 deg ALT.
 
     //if (sun.altitude > -18)
     //{
@@ -43,7 +45,6 @@ function play_tour()
 
         core.debug("Going to Region " + regionName);
         core.moveToObject(regionName, moveToDuration);
-        //core.moveToRaDecJ2000(regionRa, regionDec, moveToDuration);
         core.wait(moveToDuration);
         StelMovementMgr.zoomTo(aimFov=regionFov, zoomDuration=zoomInDuration);
         core.wait(zoomInDuration);
@@ -70,7 +71,7 @@ function play_tour()
                 pointer = true);
 
             StelMovementMgr.setFlagTracking(true);
-            core.moveToSelectedObject(duration = moveToDuration);
+            core.moveToSelectedObject(duration=moveToDuration);
             StelMovementMgr.zoomTo(aimFoV=targetFov, zoomDuration=zoomInDuration);
             ConstellationMgr.setFlagArt(false);
             core.wait(zoomInDuration);
@@ -80,7 +81,6 @@ function play_tour()
                 core.debug("Has custom image, trying to project to sky...");
                 for (k=0; k<targets[j].images.length; k++)
                 {
-                    core.debug(targets[j].images.length);
                     showImage(targets[j].images[k]);
                 }
             }

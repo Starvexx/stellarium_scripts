@@ -12,8 +12,9 @@ function intro()
     var titleXPos = logoXPos;
     var titleYPos = core.getScreenHeight() / 2;
 
-    StelMovementMgr.lookSouth(true);
-    
+    core.setDate("2023-12-21T23:59:59");
+    core.moveToAltAzi("+20", "+180", moveToDuration);
+
     ScreenImageMgr.createScreenImage(
     "nemesisLogo",
     "../../../../home/starvexx/Nemesis/stellarium_scripts/nemesis_images/Nemesis_logo.png",
@@ -35,7 +36,6 @@ function intro()
     alpha=1.,
     fadeDuration=4.
     );
-
 
     ScreenImageMgr.showImage("nemesisLogo", true);
     ScreenImageMgr.showImage("EULogo", true);
