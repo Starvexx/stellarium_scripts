@@ -1,22 +1,19 @@
-// Script to identify a problem with StelSkyImageTile
-// See original from https://bugs.launchpad.net/stellarium/+bug/1026263
-// GZ has changed the square texture with a grid which better shows the effects
-LandscapeMgr.setFlagAtmosphere(false);
-
-//core.loadSkyImage("image1", "tests/stellarium.png", 
-//		120, 5, // ra=8h, dec=5d centre
-//		4500, 0, // aiming to revisit star formation in the age of Big Data using novel machine learning techniques.
+//
+// Name: NEMESIS Tour
+// License: Public Domain
+// Author: David Hernandez
+// Description: The main driver script for the NEMESIS tour of young stellar objects.
 //
 
 //
 // Include auxillary files.
 //
 
-include("./NEMESIS/includes/common.inc");
-include("./NEMESIS/includes/intro.inc");
-include("./NEMESIS/includes/main_show.inc");
-include("./NEMESIS/includes/credits.inc");
-include("./NEMESIS/includes/outro.inc");
+include("./nemesis/includes/common.inc");
+include("./nemesis/includes/intro.inc");
+include("./nemesis/includes/main_show.inc");
+include("./nemesis/includes/credits.inc");
+include("./nemesis/includes/outro.inc");
 
 useStatusLabel("NEMESIS tour status msg: ", 50, 50, 16, "#ff0000");
 core.setGuiVisible(false);

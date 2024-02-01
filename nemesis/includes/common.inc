@@ -113,7 +113,6 @@ function showImage(img)
 		withAberration=false
 	);
 
-	StelMovementMgr.zoomTo(img.fov, zoomInDuration);
 	if (img.toggleBgr && StelSkyLayerMgr.getShowLayer("Nebulae"))
 	{
 		StelSkyLayerMgr.showLayer("Nebulae", false);
@@ -121,6 +120,8 @@ function showImage(img)
 
 	// Show the image.
 	StelSkyLayerMgr.showLayer(name, true);
+	core.wait(1);
+	StelMovementMgr.zoomTo(img.fov, zoomInDuration);
 	// Display the info text.
 	showInfo(text=img.info, x=50, y=50, fontSize=25);
 
@@ -165,6 +166,7 @@ function showDetailImage(detailImg, parentName)
 	);
 
 	StelSkyLayerMgr.showLayer(detailName, true);
+	core.wait(1);
 	StelMovementMgr.zoomTo(detailImg.fov, zoomInDuration);
 	if (parentName !== "")
 	{
