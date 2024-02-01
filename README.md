@@ -42,10 +42,6 @@ On Linux systems Stellarium is usually installed in the `share/stellarium` sub-d
 
 `/usr/share/stellarium` or `/usr/local/share/stellarium`
 
-Inside the Stellarium installation directory locate the `scripts` directory and copy the `NEMESIS_tour.ssc` file as well as the `nemesis` folder into it. If Stellarium is currently running, please restart the application, to make it visible inside the scripts manager inside Stellarium.
-
-You should now be able to run the tour.
-
 **macOS**
 On macOS the installation directory can be found inside the `Stellarium.app` application bundle. See [The
 Anatomy of macOS App Bundles](https://www.maketecheasier.com/anatomy-macos-app-bundles/) or [Bundle Programming Guide](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFBundles/Introduction/Introduction.html) for more information.
