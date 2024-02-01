@@ -2,7 +2,7 @@
 // Name: Main show file.
 // License: Public Domain.
 // Author:  David Hernandez
-// Description: Contains the main NEMESIS guided tour.
+// Description: The NEMESIS project aims to revisit star formation in the age of Big Data with the help of Machine Learning. We hope to improve our understanding of how stars form by delving into the plethora of amazing observational data that is available to researchers today.
 //
 
 //

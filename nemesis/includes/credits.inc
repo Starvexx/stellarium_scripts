@@ -30,7 +30,7 @@ function credits()
     DHt = LabelMgr.labelScreen("David Hernandez" , x, 150 + headerSkip + (5 * nameSkip), false, nameFontSize, "#f6f6f6");
     DHa = LabelMgr.labelScreen("David Hernandez" , x, 150 + headerSkip, false, nameFontSize, "#f6f6f6");
     FH = LabelMgr.labelScreen("Fabian Haberhauer", x, 150 + headerSkip, false, nameFontSize, "#f6f6f6");
-    
+
     ESO = LabelMgr.labelScreen("European Southern Observatory", x, 150 + headerSkip, false, nameFontSize, "#f6f6f6");
     spitzer = LabelMgr.labelScreen("Spitzer Space Telescope (NASA/JPL/Caltech)", x, 150 + headerSkip + nameSkip, false, nameFontSize, "#f6f6f6");
  
@@ -43,12 +43,18 @@ function credits()
     core.wait(blankTime);
 
     LabelMgr.setLabelShow(teamHead, true);
+    LabelMgr.setLabelShow(OD, true);
+    LabelMgr.setLabelShow(MA, true);
+    LabelMgr.setLabelShow(GM, true);
     LabelMgr.setLabelShow(JR, true);
     LabelMgr.setLabelShow(IG, true);
     LabelMgr.setLabelShow(DHt, true);
     core.wait(showTime);
 
     LabelMgr.setLabelShow(teamHead, false);
+    LabelMgr.setLabelShow(OD, false);
+    LabelMgr.setLabelShow(MA, false);
+    LabelMgr.setLabelShow(GM, false);
     LabelMgr.setLabelShow(JR, false);
     LabelMgr.setLabelShow(IG, false);
     LabelMgr.setLabelShow(DHt, false);
