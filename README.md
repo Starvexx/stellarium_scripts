@@ -10,6 +10,7 @@ The NEMESIS project aims to revisit star formation in the age of Big Data with t
 
 Stellarium has a scripting engine which makes it possible to script this tour by making use of the Stellarium [scripting API](https://stellarium.org/doc/0.20/scripting.html). The structure of the guided tour is as follows:
 
+```
 .
 ├── nemesis
 │   ├── images
@@ -22,6 +23,7 @@ Stellarium has a scripting engine which makes it possible to script this tour by
 │       ├── outro.inc
 │       └── source_list.inc
 └── NEMESIS_tour.ssc
+```
 
 The main source file `NEMESIS_tour.ssc` is visible in the Stellarium scrips manager and can be run directly via the Stellarium GUI. The remainder of the files are hidden from the end user.
 
