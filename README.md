@@ -1,4 +1,4 @@
-![NEMESIS Banner](https://github.com/Starvexx/NEMESIS_Stellarium_tour/blob/main/nemesis/images/Nemesis_logo.png)
+![NEMESIS Banner](https://github.com/Starvexx/NEMESIS_Stellarium_tour/blob/main/nemesis/images/Nemesis_logo.jpeg)
 
 # The NEMESIS guided tour of young stellar objects
 
