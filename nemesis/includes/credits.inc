@@ -34,6 +34,8 @@ function credits()
     ESO = LabelMgr.labelScreen("European Southern Observatory", x, 150 + headerSkip, false, nameFontSize, "#f6f6f6");
     spitzer = LabelMgr.labelScreen("Spitzer Space Telescope (NASA/JPL/Caltech)", x, 150 + headerSkip + nameSkip, false, nameFontSize, "#f6f6f6");
  
+    funding();
+
     LabelMgr.setLabelShow(authorHead, true);
     LabelMgr.setLabelShow(DHa, true);
     core.wait(showTime);
