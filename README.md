@@ -29,7 +29,7 @@ The main source file `NEMESIS_tour.ssc` is visible in the Stellarium scrips mana
 
 ## Installation
 
-In order to run the tour directly from within Stellarium it must be installed in the `scripts` directory of you Stellarium installation. Please consult the Stellarium manual to figure out the default installation directory in your computer. The following instructions are based on the information in, and partly copied from the [Stellarium User Guide (version 23.4)](http://stellarium.org/files/guide.pdf) and are listed here for your convenience. If you run into any problems please consult the official Stellarium User Guide, Chapters [2.3](http://stellarium.org/files/guide.pdf#section.2.3), [5.1-5.2](http://stellarium.org/files/guide.pdf#chapter.5.1), and [17](http://stellarium.org/files/guide.pdf#chapter.17) or open a new issue here in this GitHub repository. For manual installation please follow the instructions below.
+In order to run the tour directly from within Stellarium it must be installed in the `scripts` directory of your Stellarium installation. Please consult the Stellarium manual to figure out the default installation directory in your computer. The following instructions are based on the information in, and partly copied from the [Stellarium User Guide (version 23.4)](http://stellarium.org/files/guide.pdf) and are listed here for your convenience. If you run into any problems please consult the official Stellarium User Guide, Chapters [2.3](http://stellarium.org/files/guide.pdf#section.2.3), [5.1-5.2](http://stellarium.org/files/guide.pdf#chapter.5.1), and [17](http://stellarium.org/files/guide.pdf#chapter.17) or open a new issue here in this GitHub repository. For manual installation please follow the instructions below.
 
 **NOTE:** We plan to provide installation wizards in the future, but for now only manual installation is available.
 
@@ -37,16 +37,21 @@ In order to run the tour directly from within Stellarium it must be installed in
 First download the latest version of the tour from the Releases or clone this GitHub repository to your computer.
 To manually install the NEMESIS guided tour, you must copy the `NEMESIS_tour.ssc` script and all files and subdirectories in the `nemesis` folder into the scripts directory inside your Stellarium installation directory.
 
-**Linux**
-On Linux systems Stellarium is usually installed in the `share/stellarium` sub-directory of the installation prefix. Usually one of the following locations are possible:
+<ins>**Linux**</ins>
+
+It is recommended to install all resource files to the *User Data Directory*. This should be located in your `$HOME` directory. Move the above mentioned files to `$HOME/.stellarium/scripts`.
+
+It is also possible to install the scripts directly into the `scripts` directory in the installation directory of Stellarium. On Linux systems Stellarium is usually installed in the `share/stellarium` sub-directory of the installation prefix. Usually one of the following locations are possible:
 
 `/usr/share/stellarium` or `/usr/local/share/stellarium`
 
 **macOS**
+
 On macOS the installation directory can be found inside the `Stellarium.app` application bundle. See [The
 Anatomy of macOS App Bundles](https://www.maketecheasier.com/anatomy-macos-app-bundles/) or [Bundle Programming Guide](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFBundles/Introduction/Introduction.html) for more information.
 
 **Windows**
+
 On Windows the default installation directory is located at `C:\Program Files\Stellarium\`. However, this can be changed by the user during installation. If you have installed Stellarium at a custom location, please locate that directory before moving on.
 
 Inside the Stellarium installation directory locate the `scripts` directory and copy the `NEMESIS_tour.ssc` file as well as the `nemesis` folder into it. If Stellarium is currently running, please restart the application, to make it visible inside the scripts manager inside Stellarium.
