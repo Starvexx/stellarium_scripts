@@ -18,6 +18,8 @@ include("./nemesis/includes/outro.inc");
 useStatusLabel("NEMESIS tour status msg: ", 50, 50, 16, "#ff0000");
 core.setGuiVisible(false);
 
+initLoc = core.getObserverLocationInfo();
+
 //
 // Play the intro.
 //
@@ -28,19 +30,19 @@ intro();
 // Start the tour.
 //
 
-play_tour();
+//play_tour();
 
 //
 // Show credits.
 //
 
-credits();
+//credits();
 
 //
 // Play outro.
 //
 
-outro();
+outro(initLoc);
 
 //
 // End of show.

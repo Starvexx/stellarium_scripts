@@ -7,15 +7,15 @@
 
 function credits()
 {
-    x = core.getScreenWidth() / 4;
-    headerFontSize = 64;
-    headerColor = "#fdfdfd";
-    nameFontSize = 32;
-    nameColor = "#f6f6f6";
-    headerSkip = 2 * headerFontSize;
-    nameSkip = 1.25 * nameFontSize;
-    showTime = 5;
-    blankTime = 2.5;
+    x = core.getScreenWidth() / 4;      // X position for labels.
+    headerFontSize = 64;                // Font size for headers.
+    headerColor = "#fdfdfd";            // White.
+    nameFontSize = 32;                  // Font size for names.
+    nameColor = "#f6f6f6";              // Light gray.
+    headerSkip = 2 * headerFontSize;    // Skip between headers.
+    nameSkip = 1.25 * nameFontSize;     // Skip between names.
+    showTime = 5;                       // Time to show each section.
+    blankTime = 2.5;                    // Time to blank the screen between sections.
 
 	authorHead = LabelMgr.labelScreen("NEMESIS tour author", x, 150, false, headerFontSize, headerColor);
     teamHead = LabelMgr.labelScreen("NEMESIS team members", x, 150, false, headerFontSize, headerColor);
@@ -34,7 +34,7 @@ function credits()
     ESO = LabelMgr.labelScreen("European Southern Observatory", x, 150 + headerSkip, false, nameFontSize, "#f6f6f6");
     spitzer = LabelMgr.labelScreen("Spitzer Space Telescope (NASA/JPL/Caltech)", x, 150 + headerSkip + nameSkip, false, nameFontSize, "#f6f6f6");
  
-    funding();
+    funding();                         // Show the EU funding acknowledgement.
 
     LabelMgr.setLabelShow(authorHead, true);
     LabelMgr.setLabelShow(DHa, true);
@@ -80,5 +80,6 @@ function credits()
     LabelMgr.setLabelShow(spitzer, false);
     core.wait(blankTime);    
 
+    ScreenImageMgr.showImage("EULogo", false);  // Hide the EU funding logo.
     LabelMgr.deleteAllLabels();
 }

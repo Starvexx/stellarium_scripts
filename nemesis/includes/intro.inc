@@ -12,6 +12,11 @@ function intro()
     var titleXPos = logoXPos;
     var titleYPos = core.getScreenHeight() / 2;
 
+    core.setOberverLocation("Vienna, Austria", duration=3)
+    dateTime = core.getMJDay();
+
+
+
     core.setDate("2023-12-21T23:59:59");
     core.moveToAltAzi("+20", "+180", moveToDuration);
 
@@ -26,20 +31,8 @@ function intro()
     fadeDuration=4.
     );
 
-    ScreenImageMgr.createScreenImage(
-    "EULogo",
-    "nemesis/images/EU_flag.png",
-    25,
-    core.getScreenHeight() - 125,
-    scale=0.25,
-    visible=true,
-    alpha=1.,
-    fadeDuration=4.
-    );
-
     ScreenImageMgr.showImage("nemesisLogo", true);
-    ScreenImageMgr.showImage("EULogo", true);
-    funding();
+    funding(); // Show the EU funding acknowledgement.
 
     core.wait(5);
     ScreenImageMgr.showImage("nemesisLogo", false);

@@ -76,8 +76,20 @@ function title(text)
 
 function funding()
 {
-  fundingLabelId = LabelMgr.labelScreen("", 200, core.getScreenHeight() - 90, true, 20, "#d3d3d3", autoDeleteTimeoutMs=9000);
-  LabelMgr.setLabelText(fundingLabelId, "This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No. 101004141");
+    ScreenImageMgr.createScreenImage(
+    "EULogo",
+    "nemesis/images/EU_flag.png",
+    25,
+    core.getScreenHeight() - 125,
+    scale=0.25,
+    visible=true,
+    alpha=1.,
+    fadeDuration=4
+    );
+
+    ScreenImageMgr.showImage("EULogo", true);
+  	fundingLabelId = LabelMgr.labelScreen("", 200, core.getScreenHeight() - 90, true, 20, "#d3d3d3", autoDeleteTimeoutMs=9000);
+  	LabelMgr.setLabelText(fundingLabelId, "This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No. 101004141");
     title("A journey to the cradle of stars");
 }
 
