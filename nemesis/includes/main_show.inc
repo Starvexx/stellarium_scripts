@@ -11,7 +11,7 @@
 
 include("./nemesis/includes/source_list.inc");
 
-function play_tour()
+function play_tour(debug)
 {
     var sun = core.getObjectInfo("Sun");
     

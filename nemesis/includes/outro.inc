@@ -7,21 +7,30 @@
 
 include("./nemesis/includes/common.inc");
 
-function outro(initLoc)
+function outro(initLocID, debug)
 {
-    core.debug(initLoc.latitude);
     core.moveToAltAzi("+20", "+180", moveToDuration);
-    core.setObserverLocation(
-        initLoc.latitude,
-        initLoc.longitude,
-        initLoc.altitude,
-        initLoc.name,
-        initLoc.planet,
-        duration=3
-    );
+
+    if (debug)
+    {
+        core.debug("Restoring initial Location: " + initLocID);
+    }
+    core.setObserverLocation(initLocID, duration=3);
+
+    if (debug)
+    {
+        core.debug("Setting timezone to system default.");
+    }
+
+    core.setTimezone("system_default");
+
+    if (debug)
+    {
+        core.debug("Restoring timezone system default timezone.");
+    }
+
     core.setDate(currentSimTime);
     core.moveToAltAzi("+20", "+180", 1);
-    core.goHome();
     core.setGuiVisible(true);
     StarMgr.setFlagLabels(starFlag);
     NebulaMgr.setFlagHints(nebulaFlag);

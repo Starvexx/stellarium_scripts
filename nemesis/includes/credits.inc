@@ -5,7 +5,7 @@
 // Description: Shows the credits. Lists all persons involved in creating this show and those who have contributed any content appearing in this show.
 //
 
-function credits()
+function credits(debug)
 {
     x = core.getScreenWidth() / 4;      // X position for labels.
     headerFontSize = 64;                // Font size for headers.

@@ -16,33 +16,35 @@ include("./nemesis/includes/credits.inc");
 include("./nemesis/includes/outro.inc");
 
 useStatusLabel("NEMESIS tour status msg: ", 50, 50, 16, "#ff0000");
-core.setGuiVisible(false);
+core.setGuiVisible(true);
 
-initLoc = core.getObserverLocationInfo();
+initLocID = core.getObserverLocation();
+
+core.debug("Initial location ID: " + initLocID);
 
 //
 // Play the intro.
 //
 
-intro();
+intro(debug=true);
 
 //
 // Start the tour.
 //
 
-//play_tour();
+//play_tour(debug=True);
 
 //
 // Show credits.
 //
 
-//credits();
+//credits(debug=True);
 
 //
 // Play outro.
 //
 
-outro(initLoc);
+outro(initLocID, debug=true);
 
 //
 // End of show.
