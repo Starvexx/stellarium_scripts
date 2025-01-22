@@ -217,3 +217,58 @@ function showInfo(text, x, y, fontSize)
 	core.wait(15);
 	LabelMgr.deleteAllLabels();
 }
+
+function raDec2AltAz(ra, dec, lon, lat, gJD)
+{
+	gmst = greenwichMeanSiderealTime(gJD);
+	lst = (gmst + lon) % (2 * Math.PI);
+
+	ha = lst - ra;
+
+	if (ha < 0){
+		ha += 2 * Math.PI;
+	}
+	if (ha > Math.PI){
+		ha -= 2 * Math.PI;
+	}
+
+	alt = Math.asin(
+		(Math.sin(lat)*Math.sin(dec)) + (Math.cos(lat)*Math.cos(dec)*Math.cos(ha))
+	);
+	az = Math.atan2(Math.sin(H),
+					(Math.cos(H)*Math.sin(lat)) - (Math.tan(dec)*Math.cos(lat))
+	) - Math.PI;
+
+	if (az < 0){
+		az += 2 * Math.PI;
+	}
+
+	return [alt, az];
+}
+
+function greenwichMeanSiderealTime(jd)
+{
+	t = (jd - 2451545.0) / 36525.0;
+
+	gmst = thetaEarth(jd) + (0.014506 + 4612.156534 * t + 1.3915817 * Math.pow(t, 2) - 0.00000044 * Math.pow(t, 3) - 0.000029956 * Math.pow(t, 4) - 0.0000000368 * Math.pow(t, 5)) / 3600.0 * Math.PI / 180.0;
+	gmst %= 2 * Math.PI;
+	
+	if (gmst < 0){
+		gmst += 2 * Math.PI;
+	}
+
+	return gmst;
+}
+
+function thetaEarth(jd)
+{
+	t = jd - 2451545.0;
+	f = jd % 1.0;
+
+	theta = (2*Math.PI * (f + 0.7790572732640 + 0.00273781191135448 * t)) % (2*Math.PI);
+	if (theta < 0){
+		theta += 2*Math.PI;
+	}
+
+	return theta;
+}

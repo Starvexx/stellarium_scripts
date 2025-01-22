@@ -10,6 +10,7 @@
 //
 
 include("./nemesis/includes/common.inc");
+include("./nemesis/includes/init.inc");
 include("./nemesis/includes/intro.inc");
 include("./nemesis/includes/main_show.inc");
 include("./nemesis/includes/credits.inc");
@@ -21,6 +22,12 @@ core.setGuiVisible(true);
 initLocID = core.getObserverLocation();
 
 core.debug("Initial location ID: " + initLocID);
+
+//
+// Run show initialization.
+//
+
+init(debug=true);
 
 //
 // Play the intro.
